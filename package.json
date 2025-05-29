@@ -1,0 +1,23 @@
+{
+  "name": "demoqa-playwright",
+  "version": "1.0.0",
+  "description": "- `yarn playwright test` --> para rodar o teste: acessa a pasta do projeto (a dica é fazer pelo terminal do gitbash) e da o comando `yarn playwright test`",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolemesc/demoqa-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carolemesc/demoqa-playwright/issues"
+  },
+  "homepage": "https://github.com/carolemesc/demoqa-playwright#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^9.5.0",
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.5"
+  }
+}
