@@ -16,10 +16,6 @@ Os testes são desenvolvidos para a aplicação demo disponível em [DemoQA](htt
 
 1. **Node.js** (versão 18 ou superior)
    - Baixe em [Node.js](https://nodejs.org/).
-2. **Yarn** (gerenciador de pacotes)
-   - Execute:
-   - `corepack enable` - para habilitar as features adicionais do node que vêm por padrão desligadas
-   - `yarn --version` - pra conferir que o yarn ta instalado
 
 ### Instalação do projeto
 
@@ -32,23 +28,23 @@ Os testes são desenvolvidos para a aplicação demo disponível em [DemoQA](htt
    - `cd demoqa-playwright`
 
 3. Instale as dependências:
-   - `yarn install`
+   - `npm install`
 
 ## Instalação do Playwright
 
 - Documentação oficial: [Playwright Docs](https://playwright.dev/docs/intro)
 - Execute dentro da pasta do projeto:
-  - `yarn create playwright`
+  - `npx playwright install`
 
 ## Comandos para rodar os testes  
 - Para rodar todos os testes no modo headless:  
-  - `yarn playwright test`  
+  - `npx playwright test`  
 
 - Para rodar os testes com interface visível (headed):  
-  - `yarn playwright test --headed`  
+  - `npx playwright test --headed`  
 
 - Para rodar os testes no modo debug (step by step):  
-  - `yarn playwright test --debug`  
+  - `npx playwright test --debug`  
 
 - Para rodar uma suíte específica (exemplo "textBox") no modo debug:  
-  - `yarn playwright test textBox --debug` 
+  - `npx playwright test textBox --debug` 
