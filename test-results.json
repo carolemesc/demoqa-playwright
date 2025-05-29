@@ -56,15 +56,15 @@
   },
   "suites": [
     {
-      "title": "textBox.spec.js",
-      "file": "textBox.spec.js",
+      "title": "textBox.spec.ts",
+      "file": "textBox.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "O formulário deve ser exibido corretamente",
-          "file": "textBox.spec.js",
+          "file": "textBox.spec.ts",
           "line": 15,
           "column": 6,
           "specs": [
@@ -83,22 +83,22 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 1030,
+                      "duration": 1477,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-05-29T16:14:36.135Z",
+                      "startTime": "2025-05-29T17:05:34.914Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "fabd073739aa72233514-e17bb693df44709cefdf",
-              "file": "textBox.spec.js",
+              "id": "81ee7d28aa57c2eb9537-c8754bf92b8ca9d46057",
+              "file": "textBox.spec.ts",
               "line": 16,
-              "column": 7
+              "column": 8
             }
           ]
         }
@@ -107,8 +107,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-29T16:14:35.364Z",
-    "duration": 10014.655999999999,
+    "startTime": "2025-05-29T17:05:34.041Z",
+    "duration": 9224.743,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
