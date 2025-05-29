@@ -11,9 +11,10 @@ test.beforeAll(async ({ browser }) => {
   await page.goto(`${data.APP.URL}elements`)
 })
 
-test.describe('O checkbox deve ser selecionado corretamente', () => {
-  test('Deve ser possível selecionar checkboxs e validar essa seleção', async () => {
+test.describe('O radio button deve ser selecionado corretamente', () => {
+  test('Apenas um radio button deve ser selecionado por vez e o "No" não é habilitado', async () => {
     const CheckBox = await elements(page)
-    await CheckBox.selectCheckbox({type: 'especifico', names: ['office']})
+    await CheckBox.selectRadioButton({})
+    await CheckBox.selectRadioButton({likeSite: 'No'})
   })
 })

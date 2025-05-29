@@ -2,13 +2,19 @@
 
 ## Sobre o Projeto
 
-Este projeto tem como objetivo criar um portfólio de testes automatizados utilizando [Playwright](https://playwright.dev/) com TypeScript. O foco inicial é implementar um exemplo funcional de cada tipo de teste que representa um **caminho feliz completo** (como preenchimento de inputs, upload de documentos, etc.), servindo como base para demonstrações.
+Este projeto tem como objetivo demonstrar a manipulação e automação de interações com diferentes componentes de uma aplicação utilizando [Playwright](https://playwright.dev/)t com TypeScript.
 
-Os testes são desenvolvidos para a aplicação demo disponível em [DemoQA](https://demoqa.com/), que oferece diversos componentes para praticar automação.
+A abordagem inicial foca em criar exemplos práticos e funcionais que representam **caminhos felizes completos** (como preenchimento de inputs, upload de documentos, etc.), destacando a versatilidade e eficiência do Playwright.
+
+As interações são realizadas na aplicação demo disponível em [DemoQA](https://demoqa.com/), que fornece uma variedade de componentes ideais para explorar e exibir diferentes técnicas de automação.
 
 ## Funcionalidades Implementadas
 
-- 📝 **Testes de Formulários**: Validação do preenchimento de campos como texto, e-mail, endereços e envio de formulário.
+- 🖱️ **Testes de Interação de Elementos**:
+  - 🖋️ TextBox
+  - ☑️ CheckBox
+  - 🔘 RadioButton
+  - 🗂️ WebTables
 
 ## Como Executar
 
