@@ -15,6 +15,7 @@ As interações são realizadas na aplicação demo disponível em [DemoQA](http
   - ☑️ CheckBox
   - 🔘 RadioButton
   - 🗂️ WebTables
+  - 🎛️ Buttons
 
 ## Como Executar
 

@@ -1,11 +1,11 @@
 // @ts-check
-import { test, expect } from '@playwright/test'
+import { Page, test, expect } from '@playwright/test'
 import data from '../src/fixtures/data'
 import { faker } from '@faker-js/faker'
-import  textbox  from '../src/actions/textBoxFunction'
+import textbox from '../src/actions/textBoxFunction'
 
 /** @type {import('@playwright/test').Page} */
-let page
+let page: Page
 
 test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()

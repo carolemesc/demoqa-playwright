@@ -1,10 +1,11 @@
-import { test, expect } from '@playwright/test'
+import { Page, test, expect } from '@playwright/test'
 import data from '../fixtures/data'
 import { faker } from '@faker-js/faker'
 import { elementsLocators } from '../locators/elementsLocator'
 import gotoIfNeeded from './gotoIfNeeded'
 
-/** @param {import('@playwright/test').Page} page */
+/** @type {import('@playwright/test').Page} */
+let page: Page
 
 const RadioButton = async (page) => {
 

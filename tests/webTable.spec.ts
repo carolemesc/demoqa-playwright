@@ -1,10 +1,10 @@
 // @ts-check
-import { test, expect } from '@playwright/test'
+import { Page, test, expect } from '@playwright/test'
 import data from '../src/fixtures/data'
-import  webtable  from '../src/actions/webTableFunction'
+import webtable from '../src/actions/webTableFunction'
 
 /** @type {import('@playwright/test').Page} */
-let page
+let page: Page
 
 test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()
@@ -19,13 +19,13 @@ test.describe('As informações da tabela devem ser visualizadas, editadas, excl
 
   test('Deve ser possível editar informações da tabela', async () => {
     const WebTable = await webtable(page)
-    await WebTable.editTable({newEmail: 'email@mail.com'})
+    await WebTable.editTable({ newEmail: 'email@mail.com' })
   })
 
   test('Deve ser possível buscar informações da tabela', async () => {
     const WebTable = await webtable(page)
-    const {department} = await WebTable.addTable({})
-    await WebTable.searchTable({department})
+    const { department } = await WebTable.addTable({})
+    await WebTable.searchTable({ department })
   })
 
   test('Deve ser possível deletar informações da tabela', async () => {

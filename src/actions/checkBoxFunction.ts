@@ -1,9 +1,10 @@
-import { test, expect } from '@playwright/test'
+import { Page, test, expect } from '@playwright/test'
 import data from '../fixtures/data'
 import { faker } from '@faker-js/faker'
 import { elementsLocators } from '../locators/elementsLocator'
 
-/** @param {import('@playwright/test').Page} page */
+/** @type {import('@playwright/test').Page} */
+let page: Page
 
 const CheckBox = async (page) => {
   async function selectCheckbox({

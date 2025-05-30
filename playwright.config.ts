@@ -8,7 +8,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI
-    ? [['list'], ['json', { outputFile: 'test-results.json' }]]  // só gera json no CI
+    ? [['list'], ['json', { outputFile: 'test-results.json' }]] // só gera json no CI
     : [['list']], // localmente só mostra lista no console
   use: {
     screenshot: 'only-on-failure',
