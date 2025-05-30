@@ -6,7 +6,7 @@ import { elementsLocators } from '../locators/elementsLocator'
 /** @type {import('@playwright/test').Page} */
 let page: Page
 
-const CheckBox = async (page) => {
+const CheckBox = async (page: Page) => {
   async function selectCheckbox({
     type: _type,
     names,

@@ -7,7 +7,7 @@ import gotoIfNeeded from './gotoIfNeeded'
 /** @type {import('@playwright/test').Page} */
 let page: Page
 
-const WebTable = async (page) => {
+const WebTable = async (page: Page) => {
 
   async function addTable({
     firstName: _firstName,
@@ -283,6 +283,7 @@ const WebTable = async (page) => {
     departmentDeleted?: string
   }) {
     await gotoIfNeeded(page, `${data.APP.URL}webtables`)
+    await page.waitForTimeout(1000)
 
     const firstNameDeleted = _firstNameDeleted || await page
       .locator('.rt-tr[role="row"]')

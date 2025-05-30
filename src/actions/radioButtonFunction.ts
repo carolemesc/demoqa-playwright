@@ -7,7 +7,7 @@ import gotoIfNeeded from './gotoIfNeeded'
 /** @type {import('@playwright/test').Page} */
 let page: Page
 
-const RadioButton = async (page) => {
+const RadioButton = async (page: Page) => {
 
   async function selectRadioButton({
     likeSite: _likeSite,

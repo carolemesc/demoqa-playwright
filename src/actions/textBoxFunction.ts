@@ -6,7 +6,7 @@ import { elementsLocators } from '../locators/elementsLocator'
 /** @type {import('@playwright/test').Page} */
 let page: Page
 
-const TextBox = async (page) => {
+const TextBox = async (page: Page) => {
   async function fillTextBox({
     fullName: _fullName,
     email: _email,
