@@ -1,7 +1,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test'
 import data from '../src/fixtures/data'
-import  elements  from '../src/actions/elementsAction'
+import  radiobutton  from '../src/actions/radioButtonFunction'
 
 /** @type {import('@playwright/test').Page} */
 let page
@@ -13,7 +13,7 @@ test.beforeAll(async ({ browser }) => {
 
 test.describe('O radio button deve ser selecionado corretamente', () => {
   test('Apenas um radio button deve ser selecionado por vez e o "No" não é habilitado', async () => {
-    const CheckBox = await elements(page)
+    const CheckBox = await radiobutton(page)
     await CheckBox.selectRadioButton({})
     await CheckBox.selectRadioButton({likeSite: 'No'})
   })

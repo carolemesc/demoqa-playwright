@@ -1,7 +1,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test'
 import data from '../src/fixtures/data'
-import  elements  from '../src/actions/elementsAction'
+import  checkbox  from '../src/actions/checkBoxFunction'
 
 /** @type {import('@playwright/test').Page} */
 let page
@@ -13,7 +13,7 @@ test.beforeAll(async ({ browser }) => {
 
 test.describe('O checkbox deve ser selecionado corretamente', () => {
   test('Deve ser possível selecionar checkboxs e validar essa seleção', async () => {
-    const CheckBox = await elements(page)
+    const CheckBox = await checkbox(page)
     await CheckBox.selectCheckbox({type: 'especifico', names: ['office']})
   })
 })

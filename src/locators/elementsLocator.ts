@@ -4,4 +4,5 @@ export const elementsLocators = {
   checkboxName: '#result',
   addTable: '#addNewRecordButton',
   firstEditButton: '#edit-record-1',
+  firstDeleteButton: '#delete-record-1'
 }

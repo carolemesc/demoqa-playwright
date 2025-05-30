@@ -2,7 +2,7 @@
 import { test, expect } from '@playwright/test'
 import data from '../src/fixtures/data'
 import { faker } from '@faker-js/faker'
-import  elements  from '../src/actions/elementsAction'
+import  textbox  from '../src/actions/textBoxFunction'
 
 /** @type {import('@playwright/test').Page} */
 let page
@@ -19,7 +19,7 @@ test.describe('O formulário deve ser exibido corretamente', () => {
     const address = faker.location.street()
     const permanentAddress = faker.location.secondaryAddress()
 
-    const TextBox = await elements(page)
+    const TextBox = await textbox(page)
     await TextBox.fillTextBox({
       fullName: fullName,
       email: email,
