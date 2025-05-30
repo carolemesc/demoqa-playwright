@@ -289,32 +289,32 @@ const WebTable = async (page: Page) => {
       .locator('.rt-tr[role="row"]')
       .locator(`.rt-td:nth-child(1)`)
       .first()
-      .inputValue()
+      .innerText()
     const lastNameDeleted = _lastNameDeleted || await page
       .locator('.rt-tr[role="row"]')
       .locator(`.rt-td:nth-child(2)`)
       .first()
-      .inputValue()
+      .innerText()
     const emailDeleted = _emailDeleted || await page
       .locator('.rt-tr[role="row"]')
       .locator(`.rt-td:nth-child(4)`)
       .first()
-      .inputValue()
+      .innerText()
     const ageDeleted = _ageDeleted || await page
       .locator('.rt-tr[role="row"]')
       .locator(`.rt-td:nth-child(3)`)
       .first()
-      .inputValue()
+      .innerText()
     const salaryDeleted = _salaryDeleted || await page
       .locator('.rt-tr[role="row"]')
       .locator(`.rt-td:nth-child(5)`)
       .first()
-      .inputValue()
+      .innerText()
     const departmentDeleted = _departmentDeleted || await page
       .locator('.rt-tr[role="row"]')
       .locator(`.rt-td:nth-child(6)`)
       .first()
-      .inputValue()
+      .innerText()
 
     await page.locator(elementsLocators.firstDeleteButton).click()
 
