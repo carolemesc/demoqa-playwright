@@ -1,8 +1,8 @@
 // @ts-check
 import { Page, test, expect } from '@playwright/test'
-import data from '../src/fixtures/data'
+import data from '../helpers/fixtures/data'
 import { faker } from '@faker-js/faker'
-import textbox from '../src/actions/text-box-function'
+import textbox from '../helpers/actions/text-box-function'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page

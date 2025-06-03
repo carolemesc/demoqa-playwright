@@ -1,6 +1,6 @@
 // @ts-check
 import { Page, test, expect } from '@playwright/test'
-import data from '../src/fixtures/data'
+import data from '../helpers/fixtures/data'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page

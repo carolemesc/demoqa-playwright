@@ -1,7 +1,7 @@
 // @ts-check
 import { Page, test, expect } from '@playwright/test'
-import data from '../src/fixtures/data'
-import checkbox from '../src/actions/check-box-function'
+import data from '../helpers/fixtures/data'
+import checkbox from '../helpers/actions/check-box-function'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page

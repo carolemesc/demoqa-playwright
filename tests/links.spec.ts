@@ -1,7 +1,7 @@
 // @ts-check
 import { Page, test, expect } from '@playwright/test'
-import data from '../src/fixtures/data'
-import { elementsLocators } from '../src/locators/elementsLocator'
+import data from '../helpers/fixtures/data'
+import { elementsLocators } from '../helpers/locators/elementsLocator'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page
