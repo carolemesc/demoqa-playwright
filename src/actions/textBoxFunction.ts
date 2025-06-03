@@ -24,7 +24,7 @@ const TextBox = async (page: Page) => {
     const permanentAddress =
       _permanentAddress || faker.location.secondaryAddress()
 
-    await page.goto(`${data.APP.URL}text-box`)
+    await page.goto(`${data.APP.URL}/text-box`)
     await page.getByRole('textbox', { name: 'Full Name' }).fill(fullName)
     await page.getByRole('textbox', { name: 'name@example.com' }).fill(email)
     await page.getByRole('textbox', { name: 'Current Address' }).fill(address)

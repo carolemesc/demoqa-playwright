@@ -16,7 +16,7 @@ const CheckBox = async (page: Page) => {
   }) {
     const type = _type || 'aleatorio'
 
-    await page.goto(`${data.APP.URL}checkbox`)
+    await page.goto(`${data.APP.URL}/checkbox`)
 
     let btnsFechados = await page
       .locator(elementsLocators.btnsFechadosSelector)

@@ -4,5 +4,15 @@ export const elementsLocators = {
   checkboxName: '#result',
   addTable: '#addNewRecordButton',
   firstEditButton: '#edit-record-1',
-  firstDeleteButton: '#delete-record-1'
+  firstDeleteButton: '#delete-record-1',
+  homeLink: '#simpleLink',
+  homeURMqOLink: '#dynamicLink',
+  linkResponse: '#linkResponse',
+  createdLink: '#created',
+  noContentLink: '#no-content',
+  movedLink: '#moved',
+  badRequestLink: '#bad-request',
+  unauthorizedLink: '#unauthorized',
+  forbiddenLink: '#forbidden',
+  notFoundLink: '#invalid-url'
 }

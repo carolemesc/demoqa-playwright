@@ -31,7 +31,7 @@ const WebTable = async (page: Page) => {
     const salary = _salary || faker.number.int({ max: 9999999999 }).toString()
     const department = _department || faker.lorem.words({ min: 1, max: 3 })
 
-    await gotoIfNeeded(page, `${data.APP.URL}webtables`)
+    await gotoIfNeeded(page, `${data.APP.URL}/webtables`)
 
     await page.locator(elementsLocators.addTable).click()
 
@@ -92,7 +92,7 @@ const WebTable = async (page: Page) => {
     newSalary?: string
     newDepartment?: string
   }) {
-    await gotoIfNeeded(page, `${data.APP.URL}webtables`)
+    await gotoIfNeeded(page, `${data.APP.URL}/webtables`)
 
     await page.locator(elementsLocators.firstEditButton).click()
 
@@ -203,7 +203,7 @@ const WebTable = async (page: Page) => {
     salary?: string
     department?: string
   }) {
-    await gotoIfNeeded(page, `${data.APP.URL}webtables`)
+    await gotoIfNeeded(page, `${data.APP.URL}/webtables`)
 
     if (firstName) {
       await page
@@ -282,7 +282,7 @@ const WebTable = async (page: Page) => {
     salaryDeleted?: string
     departmentDeleted?: string
   }) {
-    await gotoIfNeeded(page, `${data.APP.URL}webtables`)
+    await gotoIfNeeded(page, `${data.APP.URL}/webtables`)
     await page.waitForTimeout(1000)
 
     const firstNameDeleted = _firstNameDeleted || await page

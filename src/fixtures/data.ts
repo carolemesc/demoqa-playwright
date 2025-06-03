@@ -1,5 +1,5 @@
 export default {
   APP: {
-      URL: 'https://demoqa.com/',
+      URL: 'https://demoqa.com',
   },
 }

@@ -10,12 +10,15 @@ As interações são realizadas na aplicação demo disponível em [DemoQA](http
 
 ## Funcionalidades Implementadas
 
-- 🖱️ **Testes de Interação de Elementos**:
+- 🖱️ **Interação de Elementos**:
   - 🖋️ TextBox
   - ☑️ CheckBox
   - 🔘 RadioButton
   - 🗂️ WebTables
   - 🎛️ Buttons
+  - 🔗 Links: 
+    - 🌐 Redirecionamento para Nova Aba
+    - 📡 Validação de Respostas HTTP
 
 ## Como Executar
 

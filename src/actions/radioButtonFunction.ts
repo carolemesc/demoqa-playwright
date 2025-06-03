@@ -16,7 +16,7 @@ const RadioButton = async (page: Page) => {
   }) {
     const likeSite = _likeSite || 'Yes'
 
-    await page.goto(`${data.APP.URL}radio-button`)
+    await page.goto(`${data.APP.URL}/radio-button`)
 
     if (likeSite === 'No') {
       await expect(
@@ -55,7 +55,7 @@ const RadioButton = async (page: Page) => {
     const salary = _salary || faker.number.int({ max: 9999999999 }).toString()
     const department = _department || faker.lorem.words({ min: 1, max: 3 })
 
-    await gotoIfNeeded(page, `${data.APP.URL}webtables`)
+    await gotoIfNeeded(page, `${data.APP.URL}/webtables`)
 
     await page.locator(elementsLocators.addTable).click()
 
@@ -116,7 +116,7 @@ const RadioButton = async (page: Page) => {
     newSalary?: string
     newDepartment?: string
   }) {
-    await gotoIfNeeded(page, `${data.APP.URL}webtables`)
+    await gotoIfNeeded(page, `${data.APP.URL}/webtables`)
 
     await page.locator(elementsLocators.firstEditButton).click()
 
@@ -227,7 +227,7 @@ const RadioButton = async (page: Page) => {
     salary?: string
     department?: string
   }) {
-    await gotoIfNeeded(page, `${data.APP.URL}webtables`)
+    await gotoIfNeeded(page, `${data.APP.URL}/webtables`)
 
     if (firstName) {
       await page
@@ -306,7 +306,7 @@ const RadioButton = async (page: Page) => {
     salaryDeleted?: string
     departmentDeleted?: string
   }) {
-    await gotoIfNeeded(page, `${data.APP.URL}webtables`)
+    await gotoIfNeeded(page, `${data.APP.URL}/webtables`)
 
     const firstNameDeleted = _firstNameDeleted || await page
       .locator('.rt-tr[role="row"]')

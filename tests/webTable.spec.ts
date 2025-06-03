@@ -8,7 +8,7 @@ let page: Page
 
 test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()
-  await page.goto(`${data.APP.URL}elements`)
+  await page.goto(`${data.APP.URL}/elements`)
 })
 
 test.describe('As informações da tabela devem ser visualizadas, editadas, excluídas, buscadas e criadas', () => {
