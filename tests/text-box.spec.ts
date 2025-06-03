@@ -2,7 +2,7 @@
 import { Page, test, expect } from '@playwright/test'
 import data from '../src/fixtures/data'
 import { faker } from '@faker-js/faker'
-import textbox from '../src/actions/textBoxFunction'
+import textbox from '../src/actions/text-box-function'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page

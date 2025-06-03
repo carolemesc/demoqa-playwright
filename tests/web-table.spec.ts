@@ -1,7 +1,7 @@
 // @ts-check
 import { Page, test, expect } from '@playwright/test'
 import data from '../src/fixtures/data'
-import webtable from '../src/actions/webTableFunction'
+import webtable from '../src/actions/web-table-function'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page

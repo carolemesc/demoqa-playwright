@@ -1,7 +1,7 @@
 // @ts-check
 import { Page, test, expect } from '@playwright/test'
 import data from '../src/fixtures/data'
-import radiobutton from '../src/actions/radioButtonFunction'
+import radiobutton from '../src/actions/radio-button-function'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page

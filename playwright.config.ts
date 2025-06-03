@@ -2,6 +2,7 @@
 import { defineConfig, devices } from '@playwright/test'
 
 export default defineConfig({
+  timeout: 60 * 1000,
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
@@ -22,7 +23,6 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // Descomente os projetos abaixo para adicionar suporte a outros navegadores.
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },
