@@ -11,6 +11,14 @@ test.beforeAll(async ({ browser }) => {
   await page.goto(`${data.APP.URL}/elements`)
 })
 
+test.beforeEach(async () => {
+  await page.goto(`${data.APP.URL}/checkbox`)
+})
+
+test.afterAll(async () => {
+  await page.close()
+})
+
 test.describe('O checkbox deve ser selecionado corretamente', () => {
   test('Deve ser possível selecionar checkboxs e validar essa seleção', async () => {
     const CheckBox = await checkbox(page)

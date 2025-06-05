@@ -1,6 +1,7 @@
 import { Page, test, expect } from '@playwright/test'
 import data from '../fixtures/data'
 import { elementsLocators } from '../locators/elementsLocator'
+import gotoIfNeeded from './gotoIfNeeded'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page
@@ -15,7 +16,7 @@ const CheckBox = async (page: Page) => {
   }) {
     const type = _type || 'aleatorio'
 
-    await page.goto(`${data.APP.URL}/checkbox`)
+    await gotoIfNeeded(page, `${data.APP.URL}/checkbox`)
 
     let btnsFechados = await page
       .locator(elementsLocators.btnsFechadosSelector)

@@ -2,6 +2,7 @@ import { Page, test, expect } from '@playwright/test'
 import data from '../fixtures/data'
 import { faker } from '@faker-js/faker'
 import { elementsLocators } from '../locators/elementsLocator'
+import gotoIfNeeded from './gotoIfNeeded'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page
@@ -24,7 +25,7 @@ const TextBox = async (page: Page) => {
     const permanentAddress =
       _permanentAddress || faker.location.secondaryAddress()
 
-    await page.goto(`${data.APP.URL}/text-box`)
+    await gotoIfNeeded(page, `${data.APP.URL}/text-box`)
     await page.getByRole('textbox', { name: 'Full Name' }).fill(fullName)
     await page.getByRole('textbox', { name: 'name@example.com' }).fill(email)
     await page.getByRole('textbox', { name: 'Current Address' }).fill(address)

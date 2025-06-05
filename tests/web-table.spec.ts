@@ -11,6 +11,14 @@ test.beforeAll(async ({ browser }) => {
   await page.goto(`${data.APP.URL}/elements`)
 })
 
+test.beforeEach(async () => {
+  await page.goto(`${data.APP.URL}/webtables`)
+})
+
+test.afterAll(async () => {
+  await page.close()
+})
+
 test.describe('As informações da tabela devem ser visualizadas, editadas, excluídas, buscadas e criadas', () => {
   test('Deve ser possível adicionar novas informações para a tabela', async () => {
     const WebTable = await webtable(page)

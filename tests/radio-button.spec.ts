@@ -11,6 +11,14 @@ test.beforeAll(async ({ browser }) => {
   await page.goto(`${data.APP.URL}/elements`)
 })
 
+test.beforeEach(async () => {
+  await page.goto(`${data.APP.URL}/text-box`)
+})
+
+test.afterAll(async () => {
+  await page.close()
+})
+
 test.describe('O radio button deve ser selecionado corretamente', () => {
   test('Apenas um radio button deve ser selecionado por vez e o "No" não é habilitado', async () => {
     const CheckBox = await radiobutton(page)

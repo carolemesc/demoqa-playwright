@@ -10,9 +10,16 @@ test.beforeAll(async ({ browser }) => {
   await page.goto(`${data.APP.URL}/elements`)
 })
 
+test.beforeEach(async () => {
+  await page.goto(`${data.APP.URL}/buttons`)
+})
+
+test.afterAll(async ({ browser }) => {
+  await page.close()
+})
+
 test.describe('Os botões devem ser ativados com cliques específicos', () => {
   test('Deve ser possível ativar os três botões', async () => {
-    await page.goto(`${data.APP.URL}/buttons`)
     await page.getByRole('button', { name: 'Double Click Me' }).dblclick()
     await expect(page.getByText('You have done a double click')).toBeVisible({
       timeout: 1000,

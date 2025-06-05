@@ -7,7 +7,15 @@ let page: Page
 
 test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()
+  await page.goto(`${data.APP.URL}/elements`)
+})
+
+test.beforeEach(async () => {
   await page.goto(`${data.APP.URL}/broken`)
+})
+
+test.afterAll(async ({ browser }) => {
+  await page.close()
 })
 
 test.describe('Ao visualizar a tela, as imagens válidas e quebradas são apresentadas como esperado', () => {

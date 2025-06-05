@@ -12,6 +12,14 @@ test.beforeAll(async ({ browser }) => {
   await page.goto(`${data.APP.URL}/elements`)
 })
 
+test.beforeEach(async () => {
+  await page.goto(`${data.APP.URL}/text-box`)
+})
+
+test.afterAll(async () => {
+  await page.close()
+})
+
 test.describe('O formulário deve ser exibido corretamente', () => {
   test('Deve ser possível preencher todos os campos, fazer o envio e visualizar as informações enviadas', async () => {
     const fullName = faker.person.fullName()

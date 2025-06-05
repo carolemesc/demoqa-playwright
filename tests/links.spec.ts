@@ -8,7 +8,15 @@ let page: Page
 
 test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()
+  await page.goto(`${data.APP.URL}/elements`)
+})
+
+test.beforeEach(async () => {
   await page.goto(`${data.APP.URL}/links`)
+})
+
+test.afterAll(async () => {
+  await page.close()
 })
 
 test.describe('Ao clicar nos links, o usuário deve ser redirecionado corretamente para outra página', () => {

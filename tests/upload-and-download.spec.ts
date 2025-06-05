@@ -11,10 +11,16 @@ test.beforeAll(async ({ browser }) => {
   await page.goto(`${data.APP.URL}/elements`)
 })
 
+test.beforeEach(async () => {
+  await page.goto(`${data.APP.URL}/upload-download`)
+})
+
+test.afterAll(async () => {
+  await page.close()
+})
+
 test.describe('Deve ser possível fazer upload e download corretamente', () => {
   test('Deve ser possível fazer o download do arquivo', async () => {
-    await page.goto(`${data.APP.URL}/upload-download`)
-
     const downloadButton = page.getByRole('link', { name: 'Download' })
     const localPath = 'helpers/fixtures/downloads/simpleFile.jpeg'
 
@@ -26,7 +32,6 @@ test.describe('Deve ser possível fazer upload e download corretamente', () => {
   })
 
   test('Deve ser possível fazer upload de arquivo', async () => {
-    await page.goto(`${data.APP.URL}/upload-download`)
     const fileName = 'simpleFile.jpeg'
     const localPath = `helpers/fixtures/downloads/${fileName}`
     const uploadButton = '#uploadFile'
