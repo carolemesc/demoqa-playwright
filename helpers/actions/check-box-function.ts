@@ -1,6 +1,5 @@
 import { Page, test, expect } from '@playwright/test'
 import data from '../fixtures/data'
-import { faker } from '@faker-js/faker'
 import { elementsLocators } from '../locators/elementsLocator'
 
 /** @type {import('@playwright/test').Page} */

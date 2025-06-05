@@ -2,7 +2,9 @@
 
 ## Sobre o Projeto
 
-Este projeto tem como objetivo demonstrar a manipulação e automação de interações com diferentes componentes de uma aplicação utilizando [Playwright](https://playwright.dev/)t com TypeScript.
+Este projeto tem como objetivo demonstrar a manipulação e automação de interações com diferentes componentes de uma aplicação utilizando [Playwright](https://playwright.dev/) com TypeScript.
+
+Os testes são configurados para rodar automaticamente no GitHub Actions, garantindo a validação contínua das funcionalidades a cada commit, o que reforça a confiabilidade e qualidade do código.
 
 A abordagem inicial foca em criar exemplos práticos e funcionais que representam **caminhos felizes completos** (como preenchimento de inputs, upload de documentos, etc.), destacando a versatilidade e eficiência do Playwright.
 
@@ -19,6 +21,7 @@ As interações são realizadas na aplicação demo disponível em [DemoQA](http
   - 🔗 Links: 
     - 🌐 Redirecionamento para Nova Aba
     - 📡 Validação de Respostas HTTP
+  -📤 Upload and Download
 
 ## Como Executar
 

@@ -14,5 +14,6 @@ export const elementsLocators = {
   badRequestLink: '#bad-request',
   unauthorizedLink: '#unauthorized',
   forbiddenLink: '#forbidden',
-  notFoundLink: '#invalid-url'
+  notFoundLink: '#invalid-url',
+  uploadedFilePath: '#uploadedFilePath',
 }
