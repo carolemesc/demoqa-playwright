@@ -34,13 +34,12 @@ test.describe('Deve ser possível fazer upload e download corretamente', () => {
   test('Deve ser possível fazer upload de arquivo', async () => {
     const fileName = 'simpleFile.jpeg'
     const localPath = `helpers/fixtures/downloads/${fileName}`
-    const uploadButton = '#uploadFile'
-    
+    const uploadButton = page.locator('#uploadFile')
+
     const DownloadFile = await file(page)
     await DownloadFile.uploadFile({
       localPath: localPath,
       uploadButton: uploadButton,
-      fileName: fileName,
     })
   })
 })

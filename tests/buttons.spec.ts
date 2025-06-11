@@ -14,7 +14,7 @@ test.beforeEach(async () => {
   await page.goto(`${data.APP.URL}/buttons`)
 })
 
-test.afterAll(async ({ browser }) => {
+test.afterAll(async () => {
   await page.close()
 })
 

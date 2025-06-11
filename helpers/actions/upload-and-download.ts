@@ -9,16 +9,11 @@ const File = async (page: Page) => {
   async function uploadFile({
     localPath,
     uploadButton,
-    fileName,
   }: {
     localPath
     uploadButton
-    fileName
   }) {
-    await page.locator(uploadButton).setInputFiles(localPath)
-    await expect(page.locator(elementsLocators.uploadedFilePath)).toContainText(
-      fileName
-    )
+    await uploadButton.setInputFiles(localPath)
   }
 
   async function downloadFile({

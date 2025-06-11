@@ -60,4 +60,4 @@ As interações são realizadas na aplicação demo disponível em [DemoQA](http
   - `npx playwright test --debug`  
 
 - Para rodar uma suíte específica (exemplo "textBox") no modo debug:  
-  - `npx playwright test textBox --debug` 
+  - `npx playwright test forms --debug` 

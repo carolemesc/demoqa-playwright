@@ -16,4 +16,7 @@ export const elementsLocators = {
   forbiddenLink: '#forbidden',
   notFoundLink: '#invalid-url',
   uploadedFilePath: '#uploadedFilePath',
+  enableDynamicButton: '#enableAfter',
+  colorDynamicButton: '#colorChange',
+  visibleDynamicButton: '#visibleAfter',
 }
