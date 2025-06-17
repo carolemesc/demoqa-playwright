@@ -44,6 +44,14 @@ const CheckBox = async (page: Page) => {
       'excelFile',
     ]
 
+    const filhosPorPai: Record<string, string[]> = {
+      office: ['Public', 'Private', 'Classified', 'General'],
+      desktop: ['Notes', 'Commands'],
+      documents: ['Workspace'],
+      workspace: ['React', 'Angular', 'Veu'],
+      downloads: ['WordFile', 'ExcelFile'],
+    }
+
     if (type === 'todos') {
       await page.locator('label').click()
       for (const texto of textosEsperados) {
@@ -90,6 +98,68 @@ const CheckBox = async (page: Page) => {
           await expect(
             page.locator(elementsLocators.checkboxName).getByText(`${nome}`)
           ).toBeVisible({ timeout: 1000 })
+
+          const filhos = filhosPorPai[nome] || []
+          for (const filho of filhos) {
+            await expect(
+              page.locator(elementsLocators.checkboxName).getByText(filho)
+            ).toBeVisible({ timeout: 1000 })
+          }
+        }
+      }
+    }
+  }
+
+  async function deselectCheckbox({ names }: { names: string[] }) {
+    await gotoIfNeeded(page, `${data.APP.URL}/checkbox`)
+
+    let btnsFechados = await page
+      .locator(elementsLocators.btnsFechadosSelector)
+      .first()
+      .isVisible()
+
+    const filhosPorPai: Record<string, string[]> = {
+      office: ['Public', 'Private', 'Classified', 'General'],
+      desktop: ['Notes', 'Commands'],
+      documents: ['Workspace'],
+      workspace: ['React', 'Angular', 'Veu'],
+      downloads: ['WordFile', 'ExcelFile'],
+    }
+
+    while (btnsFechados) {
+      await page.locator(elementsLocators.btnsFechadosSelector).first().click()
+      await page.waitForTimeout(500)
+      btnsFechados = await page
+        .locator(elementsLocators.btnsFechadosSelector)
+        .first()
+        .isVisible()
+    }
+
+    for (const nome of names) {
+      const checkBoxLocator = page
+        .locator('label')
+        .filter({ hasText: `${nome}` })
+        .locator(elementsLocators.checkBoxSelect)
+
+      const checkBoxIsChecked = await checkBoxLocator.isVisible()
+
+      if (checkBoxIsChecked) {
+        await page
+          .locator('label')
+          .filter({ hasText: `${nome}` })
+          .first()
+          .click()
+
+        await expect(
+          page.locator(elementsLocators.checkboxName).getByText(`${nome}`)
+        ).not.toBeVisible({ timeout: 1000 })
+
+        const filhos = filhosPorPai[nome] || []
+        
+        for (const filho of filhos) {
+          await expect(
+            page.locator(elementsLocators.checkboxName).getByText(`${filho}`)
+          ).not.toBeVisible({ timeout: 1000 })
         }
       }
     }
@@ -97,6 +167,7 @@ const CheckBox = async (page: Page) => {
 
   return {
     selectCheckbox,
+    deselectCheckbox,
   }
 }
 

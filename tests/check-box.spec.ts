@@ -24,4 +24,10 @@ test.describe('O checkbox deve ser selecionado corretamente', () => {
     const CheckBox = await checkbox(page)
     await CheckBox.selectCheckbox({ type: 'especifico', names: ['office'] })
   })
+
+  test('Checkbox desmarcados não devem aparecer na lista de seleção', async () => {
+    const CheckBox = await checkbox(page)
+    await CheckBox.selectCheckbox({ type: 'especifico', names: ['office'] })
+    await CheckBox.deselectCheckbox({names: ['office', 'Public', 'ExcelFile']})
+  })
 })
