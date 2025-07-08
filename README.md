@@ -21,7 +21,13 @@ As interações são realizadas na aplicação demo disponível em [DemoQA](http
   - 🔗 Links: 
     - 🌐 Redirecionamento para Nova Aba
     - 📡 Validação de Respostas HTTP
-  -📤 Upload and Download
+  - 📤 Upload and Download
+  - 🧱 Alerts, Frame & Windows:
+    - 🪟 Browser Windows
+    - 🚨 Alerts
+    - 🖼️ Frames
+    - 🪜 Nested Frames
+    - 🌐 Modal Dialogs
 
 ## Como Executar
 

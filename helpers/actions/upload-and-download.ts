@@ -1,6 +1,6 @@
 import { Page, test, expect } from '@playwright/test'
 import fs from 'fs'
-import { elementsLocators } from '../locators/elementsLocator'
+import { elementsLocators } from '../locators/elements-locator'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page
