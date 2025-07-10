@@ -8,26 +8,26 @@ let page: Page
 
 test.beforeEach(async ({ browser }) => {
   page = await browser.newPage()
-  await page.goto(`${data.APP.URL}/frames`)
+  await page.goto(`${data.APP.URL}/nestedframes`)
 })
 
 test.afterAll(async () => {
   await page.close()
 })
 
-test.describe('Deve ser possível visualizar o conteúdo do frame', () => {
+test.describe('Deve ser possível visualizar o conteúdo de um frame dentro de outro frame', () => {
   test('O conteúdo dos dois frames devem estar visiveis', async () => {
+    await expect(page.getByText('Sample Nested Iframe page.')).toBeVisible()
     await expect(
       page
-        .locator(alertsFrameWindowsLocators.frame1)
+        .locator('#frame1')
         .contentFrame()
-        .getByRole('heading', { name: 'This is a sample page' })
+        .locator('iframe')
+        .contentFrame()
+        .getByText('Child Iframe')
     ).toBeVisible()
     await expect(
-      page
-        .locator(alertsFrameWindowsLocators.frame2)
-        .contentFrame()
-        .getByRole('heading', { name: 'This is a sample page' })
+      page.locator('#frame1').contentFrame().getByText('Parent frame')
     ).toBeVisible()
   })
 })
