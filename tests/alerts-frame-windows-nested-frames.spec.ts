@@ -20,14 +20,14 @@ test.describe('Deve ser possível visualizar o conteúdo de um frame dentro de o
     await expect(page.getByText('Sample Nested Iframe page.')).toBeVisible()
     await expect(
       page
-        .locator('#frame1')
+        .locator(alertsFrameWindowsLocators.frame1)
         .contentFrame()
         .locator('iframe')
         .contentFrame()
         .getByText('Child Iframe')
     ).toBeVisible()
     await expect(
-      page.locator('#frame1').contentFrame().getByText('Parent frame')
+      page.locator(alertsFrameWindowsLocators.frame1).contentFrame().getByText('Parent frame')
     ).toBeVisible()
   })
 })

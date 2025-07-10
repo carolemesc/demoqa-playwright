@@ -6,4 +6,6 @@ export const alertsFrameWindowsLocators = {
   promtButton: '#promtButton',
   frame1: '#frame1',
   frame2: '#frame2',
+  closeSmallModal: '#closeSmallModal',
+  closeLargeModal: '#closeLargeModal',
 }
