@@ -1,13 +1,18 @@
 // @ts-check
 import { Page, test, expect } from '@playwright/test'
 import data from '../helpers/fixtures/data'
+import gotoIfNeeded from '../helpers/actions/gotoIfNeeded'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page
 
-test.beforeEach(async ({ browser }) => {
+test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()
   await page.goto(`${data.APP.URL}/browser-windows`)
+})
+
+test.beforeEach(async () => {
+  await gotoIfNeeded(page, `${data.APP.URL}/browser-windows`)
 })
 
 test.afterAll(async () => {

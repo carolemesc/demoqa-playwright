@@ -2,13 +2,18 @@
 import { Page, test, expect } from '@playwright/test'
 import data from '../helpers/fixtures/data'
 import { alertsFrameWindowsLocators } from '../helpers/locators/alerts-frame-windows-locator'
+import gotoIfNeeded from '../helpers/actions/gotoIfNeeded'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page
 
-test.beforeEach(async ({ browser }) => {
+test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()
   await page.goto(`${data.APP.URL}/modal-dialogs`)
+})
+
+test.beforeEach(async () => {
+  await gotoIfNeeded(page, `${data.APP.URL}/modal-dialogs`)
 })
 
 test.afterAll(async () => {

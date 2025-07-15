@@ -2,6 +2,7 @@
 import { Page, test, expect } from '@playwright/test'
 import data from '../helpers/fixtures/data'
 import checkbox from '../helpers/actions/check-box-function'
+import gotoIfNeeded from '../helpers/actions/gotoIfNeeded'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page
@@ -12,7 +13,7 @@ test.beforeAll(async ({ browser }) => {
 })
 
 test.beforeEach(async () => {
-  await page.goto(`${data.APP.URL}/checkbox`)
+  await gotoIfNeeded(page, `${data.APP.URL}/elements`)
 })
 
 test.afterAll(async () => {

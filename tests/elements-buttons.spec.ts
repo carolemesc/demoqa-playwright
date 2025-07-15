@@ -1,6 +1,7 @@
 // @ts-check
 import { Page, test, expect } from '@playwright/test'
 import data from '../helpers/fixtures/data'
+import gotoIfNeeded from '../helpers/actions/gotoIfNeeded'
 
 /** @type {import('@playwright/test').Page} */
 let page: Page
@@ -11,7 +12,7 @@ test.beforeAll(async ({ browser }) => {
 })
 
 test.beforeEach(async () => {
-  await page.goto(`${data.APP.URL}/buttons`)
+  await gotoIfNeeded(page, `${data.APP.URL}/elements`)
 })
 
 test.afterAll(async () => {

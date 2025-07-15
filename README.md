@@ -28,6 +28,16 @@ As interações são realizadas na aplicação demo disponível em [DemoQA](http
     - 🖼️ Frames
     - 🪜 Nested Frames
     - 🌐 Modal Dialogs
+  - 🧩 Widgets:
+    - 📚 Accordian
+    - ⌨️ Auto Complete
+    - 📅 Date Picker
+    - 🔢 Slider
+    - 🎛️ Progress Bar
+    - 🧭 Tabs
+    - 📃 Tool Tips
+    - 📑 Menu
+    - 📥 Select Menu
 
 ## Como Executar
 
