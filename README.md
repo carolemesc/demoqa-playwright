@@ -38,6 +38,12 @@ As interações são realizadas na aplicação demo disponível em [DemoQA](http
     - 📃 Tool Tips
     - 📑 Menu
     - 📥 Select Menu
+  - 🧲 Interactions:
+    - 🔀 Sortable
+    - ✅ Selectable
+    - 📏 Resizable
+    - 📥 Droppable
+    - 🧲 Draggable
 
 ## Como Executar
 
