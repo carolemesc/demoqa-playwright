@@ -9,11 +9,11 @@ let page: Page
 
 test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()
-  await page.goto(`${data.APP.URL}/elements`)
+  await page.goto(`${data.APP.URL}/checkbox`)
 })
 
 test.beforeEach(async () => {
-  await gotoIfNeeded(page, `${data.APP.URL}/elements`)
+  await gotoIfNeeded(page, `${data.APP.URL}/checkbox`)
 })
 
 test.afterAll(async () => {

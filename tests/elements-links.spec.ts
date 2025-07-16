@@ -8,7 +8,7 @@ let page: Page
 
 test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()
-  await page.goto(`${data.APP.URL}/elements`)
+  await page.goto(`${data.APP.URL}/links`)
 })
 
 test.beforeEach(async () => {
@@ -20,7 +20,7 @@ test.afterAll(async () => {
 })
 
 test.describe('Ao clicar nos links, o usuário deve ser redirecionado corretamente para outra página', () => {
-  test('Deve abrir "Home" em nova aba', async () => {
+  test('Deve abrir `Home` em nova aba', async () => {
     const pagePromise = page.context().waitForEvent('page')
     await page.locator(elementsLocators.homeLink).click()
     const newPage = await pagePromise

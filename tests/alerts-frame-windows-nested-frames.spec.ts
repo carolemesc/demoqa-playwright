@@ -21,7 +21,7 @@ test.afterAll(async () => {
 })
 
 test.describe('Deve ser possível visualizar o conteúdo de um frame dentro de outro frame', () => {
-  test('O conteúdo dos dois frames devem estar visiveis', async () => {
+  test('O conteúdo dos dois nested frames devem estar visiveis', async () => {
     await expect(page.getByText('Sample Nested Iframe page.')).toBeVisible()
     await expect(
       page

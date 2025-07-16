@@ -75,5 +75,8 @@ As interações são realizadas na aplicação demo disponível em [DemoQA](http
 - Para rodar os testes no modo debug (step by step):  
   - `npx playwright test --debug`  
 
-- Para rodar uma suíte específica (exemplo "textBox") no modo debug:  
-  - `npx playwright test forms --debug` 
+- Para rodar uma suíte específica (exemplo "elements-broken-links-images") no modo debug:  
+  - `npx playwright tests/elements-broken-links-images.spec.ts forms --debug`
+
+- Para rodar um teste específico (exemplo "Um item deve ser expandido por vez enquanto os outros ficam reduzidos"):
+  - `npx playwright test -g "Um item deve ser expandido por vez enquanto os outros ficam reduzidos"`

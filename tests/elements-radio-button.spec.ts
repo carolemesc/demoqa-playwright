@@ -8,11 +8,11 @@ let page: Page
 
 test.beforeAll(async ({ browser }) => {
   page = await browser.newPage()
-  await page.goto(`${data.APP.URL}/elements`)
+  await page.goto(`${data.APP.URL}/radio-button`)
 })
 
 test.beforeEach(async () => {
-  await page.goto(`${data.APP.URL}/text-box`)
+  await page.goto(`${data.APP.URL}/radio-button`)
 })
 
 test.afterAll(async () => {
