@@ -22,16 +22,18 @@ test.afterAll(async () => {
 
 test.describe('Deve ser possível interagir com a barra de progresso corretamente', () => {
   test('Deve mover a barra até um valor específico quando clicar em "stop" e validar o resultado', async () => {
+    let value = '24%'
     await page.getByRole('button', { name: 'Start' }).click()
     await page.waitForFunction(
-      () => {
-        const progress = document.querySelector(widgetLocators.progressBar)
-        return progress?.textContent?.includes('24%')
+      ([selector, expected]) => {
+        const progress = document.querySelector(selector)
+        return progress?.textContent?.includes(expected)
       },
+      [widgetLocators.progressBar, value],
       { timeout: 10000 }
     )
 
     await page.getByRole('button', { name: 'Stop' }).click()
-    await expect(page.locator(widgetLocators.progressBar)).toContainText('24%')
+    await expect(page.locator('#progressBar')).toContainText(value)
   })
 })
