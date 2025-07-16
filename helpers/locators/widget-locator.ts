@@ -4,4 +4,7 @@ export const widgetLocators = {
   autoCompleteSingleInput: '#autoCompleteSingleInput',
   selectOptionSingle: '#react-select-3-option-0',
   autoCompleteSingleContainer: '#autoCompleteSingleContainer div',
+  datePickerMonthYearInput: '#datePickerMonthYearInput',
+  dateAndTimePickerInput: '#dateAndTimePickerInput',
+  dateAndTimePicker: '#dateAndTimePicker span',
 }
