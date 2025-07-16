@@ -9,4 +9,15 @@ export const widgetLocators = {
   dateAndTimePicker: '#dateAndTimePicker span',
   sliderValue: '#sliderValue',
   progressBar: '#progressBar',
+  selectValueMenu: '#withOptGroup svg',
+  selectValueOption: '#selectMenuContainer div',
+  selectOneMenu: '#selectOne svg',
+  oldStyleSelectMenu: '#oldSelectMenu',
+  multiselectDropDown: '#selectMenuContainer svg',
+  colorOptions: {
+    Green: '#react-select-4-option-0',
+    Blue: '#react-select-4-option-1',
+    Black: '#react-select-4-option-2',
+    Red: '#react-select-4-option-3',
+  },
 }
