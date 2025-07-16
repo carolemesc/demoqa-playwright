@@ -7,4 +7,6 @@ export const widgetLocators = {
   datePickerMonthYearInput: '#datePickerMonthYearInput',
   dateAndTimePickerInput: '#dateAndTimePickerInput',
   dateAndTimePicker: '#dateAndTimePicker span',
+  sliderValue: '#sliderValue',
+  progressBar: '#progressBar',
 }

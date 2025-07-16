@@ -24,6 +24,6 @@ test.describe('Deve ser possível interagir com o slider corretamente', () => {
   test('Deve mover o slider até um valor específico e validar o resultado', async () => {
     const value = '89'
     await page.getByRole('slider').fill(value)
-    await expect(page.locator('#sliderValue')).toHaveValue(value)
+    await expect(page.locator(widgetLocators.sliderValue)).toHaveValue(value)
   })
 })
